@@ -35,11 +35,10 @@ class TodoController extends Controller
      /**
      * search Fault data based on given parameters.
      *
-     * @param Int $status
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function search($status,Request $request) {
+    public function search(Request $request) {
         
         //search parameters
         $keyword = $request->keyword ?? '';

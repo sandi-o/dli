@@ -18,6 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/login', 'AuthController@login');
+Route::post('/logout', 'AuthController@logout');
+
 Route::get('/categories','CategoryController@index');
 Route::post('/categories', 'CategoryController@store');
 Route::get('/categories/{category}', 'CategoryController@show');
